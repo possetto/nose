@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramo de Flores Amarillas</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            flex-direction: column;
+        }
+
+        .ramo {
+            text-align: center;
+        }
+
+        .flores {
+            font-size: 3em;
+            color: yellow;
+        }
+
+        .boton-emergencia {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .iframe-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+
+        img {
+            max-width: 80%; /* La imagen ocupará como máximo el 80% del ancho del contenedor */
+            height: auto; /* La altura se ajustará automáticamente */
+        }
+    </style>
+</head>
+<body>
+    <div class="ramo">
+        <h1>Te mando este hermoso ramo virtual mí bebé, te amo mucho mucho mucho con todo mí corazoncito</h1>
+        <p class="flores"> ️ ️</p>
+        <iframe src="https://drive.google.com/file/d/1Ack2QCD2FQtRfrvzmlm3Yq8Hr7cQPwSK/preview" width="1152" height="648" allow="autoplay" alt="Ramo de flores amarillas">></iframe>
+        <button class="boton-emergencia" onclick="mostrarIframe()">Emergencia</button>
+    </div>
+
+    <div class="iframe-container" id="iframeContainer">
+        <iframe src="https://drive.google.com/file/d/18DFjKszZAvRabpbKCZcm2g01dI0ujcJ1/preview" width="1440" height="840" allow="autoplay"></iframe>
+        <button onclick="ocultarIframe()">Cerrar</button>
+    </div>
+
+    <script>
+        function mostrarIframe() {
+            document.getElementById("iframeContainer").style.display = "block";
+        }
+
+        function ocultarIframe() {
+            document.getElementById("iframeContainer").style.display = "none";
+        }
+    </script>
+</body>
+</html>
